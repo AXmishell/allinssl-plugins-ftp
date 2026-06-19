@@ -1,0 +1,64 @@
+﻿{
+    "name":  "ftp",
+    "description":  "上传证书到 FTP 服务器",
+    "version":  "1.0.0",
+    "author":  "ALLinSSL",
+    "config":  [
+                   {
+                       "name":  "host",
+                       "type":  "string",
+                       "description":  "FTP 服务器地址",
+                       "required":  true
+                   },
+                   {
+                       "name":  "port",
+                       "type":  "number",
+                       "description":  "FTP 端口，默认 21",
+                       "required":  false
+                   },
+                   {
+                       "name":  "username",
+                       "type":  "string",
+                       "description":  "FTP 用户名",
+                       "required":  true
+                   },
+                   {
+                       "name":  "password",
+                       "type":  "string",
+                       "description":  "FTP 密码",
+                       "required":  true
+                   },
+                   {
+                       "name":  "remote_path",
+                       "type":  "string",
+                       "description":  "远程上传目录路径",
+                       "required":  true
+                   },
+                   {
+                       "name":  "use_tls",
+                       "type":  "string",
+                       "description":  "是否启用 FTPS (显式 TLS)，默认 false",
+                       "required":  false
+                   }
+               ],
+    "actions":  [
+                    {
+                        "name":  "upload",
+                        "description":  "上传证书到 FTP 服务器",
+                        "params":  [
+                                       {
+                                           "name":  "cert_filename",
+                                           "type":  "string",
+                                           "description":  "证书文件名，默认 fullchain.pem",
+                                           "required":  false
+                                       },
+                                       {
+                                           "name":  "key_filename",
+                                           "type":  "string",
+                                           "description":  "私钥文件名，默认 privkey.pem",
+                                           "required":  false
+                                       }
+                                   ]
+                    }
+                ]
+}
