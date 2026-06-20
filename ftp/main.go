@@ -30,7 +30,7 @@ var pluginMeta = map[string]interface{}{
 	"name":        "ftp",
 	"description": "上传证书到 FTP 服务器",
 	"version":     "1.0.0",
-	"author":      "ALLinSSL",
+	"author":      "AXmishell",
 	"config": []map[string]interface{}{
 		{
 			"name":        "host",
